@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <style>
+
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #fffdfa;
+        color: #00001a;
+        padding: 1rem 8rem;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+
+      nav h3 {
+        font-size: 2rem;
+        font-weight: 800; /* ExtraBold */
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        color: #5e607a;
+        font-weight: 400;
+        cursor: pointer;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .hero-content h2 {
+        font-size: 3rem;
+        font-weight: 800; /* ExtraBold */
+        line-height: 1.1;
+      }
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .hero-text p {
+        color: #5e607a;
+        line-height: 1.6;
+        font-weight: 400;
+      }
+
+      button {
+        background: #f15e50;
+        color: black;
+        border: none;
+        padding: 0.8rem 2rem;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        font-weight: 700; /* Bold */
+        cursor: pointer;
+        margin-top: 1rem;
+        width: fit-content;
+      }
+
+      .sidebar {
+        background: #00001a;
+        color: white;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sidebar-cards {
+        max-height: 100;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .sidebar h3 {
+        color: #e9ab53;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      .sidebar-card {
+        padding: 2rem 0;
+        border-bottom: 1px solid #5e607a;
+        margin-bottom: 10px;
+      }
+
+      .sidebar-card:last-child {
+        border-bottom: none;
+      }
+
+      .sidebar-card h4 {
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .sidebar-card p {
+        color: #c5c6ce;
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .card {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .card img {
+        width: 100px;
+      }
+
+      .card-content h4 {
+        color: #f15e50;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .card-content h3 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        cursor: pointer;
+        font-weight: 800;
+      }
+
+      .card-content h3:hover {
+        color: #f15e50;
+      }
+
+      .card-content p {
+        color: #5e607a;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <h3>W.</h3>
+      <ul>
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <!-- Hero -->
+      <div>
+        <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+
+        <div class="hero-content">
+          <h2>The Bright Future of Web 3.0?</h2>
+
+          <div class="hero-text">
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button>Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>New</h3>
+
+        <div class="sidebar-cards">
+
+        <div class="sidebar-card">
+          <h4>Hydrogen VS Electric Cars</h4>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>The Downsides of AI Artistry</h4>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Is VC Funding Drying Up?</h4>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Bottom Cards -->
+    <div class="cards">
+      <div class="card">
+        <img src="./assets/images/image-retro-pcs.jpg" />
+        <div class="card-content">
+          <h4>01</h4>
+          <h3>Reviving Retro PCs</h3>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/image-top-laptops.jpg" />
+        <div class="card-content">
+          <h4>02</h4>
+          <h3>Top 10 Laptops of 2022</h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/image-gaming-growth.jpg" />
+        <div class="card-content">
+          <h4>03</h4>
+          <h3>The Growth of Gaming</h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
